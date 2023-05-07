@@ -3,9 +3,9 @@ FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY ./dist/apps/nestapp .
+COPY dist/apps/nestapp .
 
-ENV PORT=3333
+ENV PORT=3000
 
 EXPOSE ${PORT}
 
@@ -17,4 +17,4 @@ RUN yarn add reflect-metadata tslib rxjs helmet cache-manager @nestjs/platform-e
 CMD node ./main.js
 
 # docker build -f ./apps/nestapp/Dockerfile . -t nestapp
-# docker run -d -p 3333:3333 nestapp
+# docker run -d -p 3000:3000 nestapp
