@@ -2,6 +2,15 @@
 
 # nx-nextjs-nestjs example
 
+## Tech Stack
+- [x] nextjs
+- [x] nestjs
+- [x] nx monorepo
+- [x] cypress/storybook
+- [x] styled-component
+- [x] docker/docker-compose
+- [ ] dev container
+
 ````javascript
 
 $ npm install nx -g
