@@ -27,7 +27,17 @@ $ npx create-nx-workspace@latest nx-nextjs-nestjs-monorepo --package-manager=yar
 $ apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
 # storybook
+$ yarn add -D @nx/storybook
 
+# express
+$ yarn add --dev @nx/express
+
+$ nx g @nx/express:app expressapp
+
+# angular
+$ yarn add -D @nx/angular
+
+$ nx g @nx/angular:app angularapp
 ````
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
