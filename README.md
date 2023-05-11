@@ -5,10 +5,12 @@
 ## Tech Stack
 - [x] nextjs
 - [x] nestjs
+- [x] expressjs
 - [x] nx monorepo
 - [x] cypress/storybook
 - [x] styled-component
 - [x] docker/docker-compose
+- [x] husky
 - [ ] dev container
 
 ````javascript
@@ -27,6 +29,37 @@ $ npx create-nx-workspace@latest nx-nextjs-nestjs-monorepo --package-manager=yar
 $ apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
 # storybook
+$ yarn add -D @nx/storybook
+
+# express
+$ yarn add --dev @nx/express
+
+$ nx g @nx/express:app expressapp
+
+# angular
+$ yarn add -D @nx/angular
+
+$ nx g @nx/angular:app angularapp
+
+# node
+$ yarn add -D @nx/node
+
+$ nx g @nx/node:application nodeapp
+>  NX  Generating @nx/node:application
+✔ Which framework do you want to use? · express
+
+# react
+$ yarn add -D @nx/react
+
+$ nx g @nx/react:app reactapp
+
+$ nx g @nx/react:storybook-configuration reactapp
+
+# remove project
+$ nx g rm projectname
+
+# husky
+$ npx husky-init
 
 ````
 
