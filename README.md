@@ -10,6 +10,7 @@
 - [x] cypress/storybook
 - [x] styled-component
 - [x] docker/docker-compose
+- [x] husky
 - [ ] dev container
 
 ````javascript
@@ -56,6 +57,9 @@ $ nx g @nx/react:storybook-configuration reactapp
 
 # remove project
 $ nx g rm projectname
+
+# husky
+$ npx husky-init
 
 ````
 
