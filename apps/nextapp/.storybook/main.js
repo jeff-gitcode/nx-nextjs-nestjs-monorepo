@@ -1,6 +1,14 @@
+const path = require('path');
+
 const config = {
-  stories: ['../**/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-essentials'],
+  stories: ['../components/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  addons: ['@storybook/addon-essentials',  '@storybook/addon-styling',
+  {
+    name: 'storybook-addon-next',
+    options: {
+      nextConfigPath: path.resolve(__dirname, '../next.config.js')
+    }
+  }],
   framework: {
     name: '@storybook/nextjs',
     options: {},
