@@ -5,6 +5,7 @@
 ## Tech Stack
 - [x] nextjs
 - [x] nestjs
+- [x] expressjs
 - [x] nx monorepo
 - [x] cypress/storybook
 - [x] styled-component
@@ -38,6 +39,24 @@ $ nx g @nx/express:app expressapp
 $ yarn add -D @nx/angular
 
 $ nx g @nx/angular:app angularapp
+
+# node
+$ yarn add -D @nx/node
+
+$ nx g @nx/node:application nodeapp
+>  NX  Generating @nx/node:application
+✔ Which framework do you want to use? · express
+
+# react
+$ yarn add -D @nx/react
+
+$ nx g @nx/react:app reactapp
+
+$ nx g @nx/react:storybook-configuration reactapp
+
+# remove project
+$ nx g rm projectname
+
 ````
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
