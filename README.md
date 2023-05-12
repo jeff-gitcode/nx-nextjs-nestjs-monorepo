@@ -12,6 +12,7 @@
 - [x] docker/docker-compose
 - [x] husky
 - [ ] dev container
+- [x] github actions (CI/CD)
 
 ````javascript
 
@@ -64,6 +65,7 @@ $ npx husky-init
 # nx container
 $ yarn add -D @nx-tools/nx-container
 
+# add .github/workflows/ci.yml
 ````
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
