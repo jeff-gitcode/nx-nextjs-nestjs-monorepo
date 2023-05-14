@@ -1,0 +1,36 @@
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "expressapp"
+    },
+    "spec": {
+      "replicas": 1,
+      "selector": {
+        "matchLabels": {
+          "app": "expressapp"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "expressapp"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "expressapp",
+              "image": "expressapp:latest",
+              "imagePullPolicy": "Never",
+              "ports": [
+                {
+                  "containerPort": 3333
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }

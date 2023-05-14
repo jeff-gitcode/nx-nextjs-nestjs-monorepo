@@ -13,6 +13,8 @@
 - [x] husky
 - [ ] dev container
 - [x] github actions (CI/CD)
+- [x] minikube
+- [] testkube
 
 ````javascript
 
@@ -66,6 +68,86 @@ $ npx husky-init
 $ yarn add -D @nx-tools/nx-container
 
 # add .github/workflows/ci.yml
+
+# kubernetes
+# install kubectl
+$ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+# verify binary
+$ curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+$ echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+
+$ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+$ kubectl version --client
+
+# install minikube
+$ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+$ sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+$ minikube version
+
+# install docker
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+
+$ sudo sh get-docker.sh
+
+$ docker --version
+
+# install docker-compose
+$ sudo apt install docker-compose
+
+$ docker-compose --version
+
+# install docker-desktop
+$ sudo apt install gnome-terminal
+
+# run minikube
+# start k8s
+$ minikube start
+
+# Check if minikube node is ready
+$ kubectl get nodes
+
+# docker build
+$ yarn build:all
+
+# config
+$ minikube docker-env 
+$ eval $(minikube -p minikube docker-env)
+
+# build docker
+$ docker build -f ./apps/expressapp/Dockerfile . -t expressapp
+
+$ docker images --format "table {{.ID}}\t{{.Tag}}\t{{.Repository}}"
+
+# deploy
+$ kubectl apply -f apps/expressapp/deployment.json 
+$ kubectl apply -f apps/expressapp/service.json 
+
+$ kubectl get pods
+$ kubectl get services
+
+$ minikube service expressapp-service --url
+
+$ minikube dashboard
+
+# helm
+$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+$ chmod 700 get_helm.sh
+$ ./get_helm.sh
+
+# testkube
+# install
+$ wget -qO - https://repo.testkube.io/key.pub | sudo apt-key add - && echo "deb https://repo.testkube.io/linux linux main" | sudo tee -a /etc/apt/sources.list && sudo apt-get update && sudo apt-get install -y testkube
+
+# testtube init
+$ testkube init
+
+# dashboard
+$ testkube dashboard
 ````
 
 # Github Actions (CI/CD)
