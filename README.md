@@ -14,7 +14,7 @@
 - [ ] dev container
 - [x] github actions (CI/CD)
 - [x] minikube
-- [] testkube
+- [x] testkube
 
 ````javascript
 
@@ -152,6 +152,9 @@ $ testkube dashboard
 
 # Github Actions (CI/CD)
 ![alt text](./doc/github-actions.jpg)
+
+# TestKube
+![alt text](./doc/testkube.jpg)
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
