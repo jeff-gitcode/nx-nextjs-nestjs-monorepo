@@ -15,6 +15,7 @@
 - [x] github actions (CI/CD)
 - [x] minikube
 - [x] testkube
+- [x] zsh
 
 ````javascript
 
@@ -148,6 +149,22 @@ $ testkube init
 
 # dashboard
 $ testkube dashboard
+
+# zsh
+$ sudo apt-get update
+
+$ sudo apt-get install zsh
+
+$ zsh --version
+
+$ which zsh
+
+# ohmyzsh
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Press ctrl+shift+p to fire up the command box.
+# Type ‘select default shell’ to filter, and and enter the Terminal-Select Default Shell .
+# select zsh as default shell.
 ````
 
 # Github Actions (CI/CD)
@@ -155,6 +172,9 @@ $ testkube dashboard
 
 # TestKube
 ![alt text](./doc/testkube.jpg)
+
+# ZSH
+![alt text](./doc/zsh.jpg)
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
